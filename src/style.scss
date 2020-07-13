@@ -1,0 +1,70 @@
+#root {
+    display: flex;
+    flex-direction: column;
+}
+.counter {
+    flex:1;
+    font-size: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 0;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            border: 1px solid transparent;
+            padding: .5rem;
+
+            &:hover {
+                cursor: pointer;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.status {
+    background: #ccc;
+    color: #111;
+    height: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.catagories-section {
+    margin: 2%;
+}
+.catagories li
+{
+        display: inline-block;
+        padding: 8px;
+        color: #3646aa;
+        border-right: 1px solid #000000;
+        line-height: 20px;
+        &:hover {
+            cursor: pointer;
+        }
+}
+.MuiToolbar-root{
+    box-shadow: -6px 12px 19px -4px rgba(82,82,82,1);
+
+}
+.catagories li:last-child
+{
+border:none;
+}
+.makeStyles-footer-14
+{
+    background-color: gray;
+}
+.MuiTypography-root h5
+{
+    margin: 0px;
+    line-height: 50px;
+}
