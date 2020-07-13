@@ -1,17 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { display} from '../../store/categories.js';
 const Status = props => {
     return (
         <section className="status">
-             {props.product.products.map(productitem=> 
-                     <li onClick={()=> props.display(productitem.catagory)} key={productitem.name}><h1>{productitem.name}</h1></li> 
+            
+             {props.productlist.map(productitem=> 
+                     <span onClick={()=> props.display(productitem.catagory)} key={productitem.name}>
+                         Name:{productitem.name}  
+                         <br />  
+                          catagory:{productitem.catagory}  
+                          <br />             
+                         price:{productitem.price}
+                         <br />
+                         inStock:{productitem.inStock}
+                         <br/>
+                         </span> 
                  )} 
         </section>
     );
 }
 const mapStateToProps = state => ({
-    product: state.product
+    productlist: state.catagory.productlist
 });
-
-export default connect(mapStateToProps)(Status);
-
+const mapDispatchToProps = {display};
+export default connect(mapStateToProps, mapDispatchToProps)(Status);

@@ -7,7 +7,8 @@ const Catagoryshop = props => {
             <ul className="catagories">
             <h1>Browser our Categories</h1>
                 {props.catagory.categories.map(catagory=> 
-                     <li onClick={()=> props.display(catagory.name)} key={catagory.name}><h1>{catagory.name}</h1></li> 
+      
+          <li onClick={()=> props.display(catagory.name)} key={catagory.name}>{catagory.name}</li>
                  )} 
             </ul>
         </section>

@@ -13,24 +13,25 @@ let initialState = {
         { name: 'Eggs', category: 'food', price: 1.99, inStock: 12 },
         { name: 'Bread', category: 'food', price: 2.39, inStock: 90 },
     ],
-    activeCategory: ''
+    activeCategory: '',
+    productlist:[]
+
 };
 export default (state = initialState, action) => {
     let { type, payload } = action;
     switch (type) {
-        case 'display':
-            let products = state.products.filter(productitem => {
-                if (productitem.category == payload) {
-                    return { name: productitem.name, category: productitem.category, price: productitem.price, inStock: productitem.inStock, activeCategory: payload };
+        case 'DISPLAY':
+            let  productlist = state.products.filter(productitem => {
+                if (productitem.category === payload) {
+                  return true;
                 }
+                // return productitem;
             });
-            let catagory = state.categories.filter(categorieitem => {
-                if (categorieitem.name == payload) {
-                    return { name: categorieitem.name, displayName: categorieitem.displayName };
-                }
-            })
+            // let  categories = state.categories;
+            let activeCategory=payload;
             return {
-                catagories: state.catagories,products, catagory
+            
+            ...state,activeCategory,productlist
             }
         default:
             return state;
@@ -38,7 +39,7 @@ export default (state = initialState, action) => {
 }
 export const display = (name) => {
     return {
-        type: 'display',
+        type: 'DISPLAY',
         payload: name
     }
 }

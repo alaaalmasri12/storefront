@@ -30,13 +30,17 @@
 .status {
     background: #ccc;
     color: #111;
-    height: 4rem;
+    height: 30rem;
     font-size: 2rem;
     font-weight: bold;
+    padding-top: 5%;
     text-align: center;
     text-transform: uppercase;
 }
-
+.status li
+{   
+        list-style-type: none;  
+}
 .catagories-section {
     margin: 2%;
 }
