@@ -1,5 +1,6 @@
 let initialState = {
     productscart: [],
+    count:0
 };
 export default (state = initialState, action) => {
 
@@ -9,8 +10,7 @@ export default (state = initialState, action) => {
         case 'ADD':
             console.log(payload);
             productscart = state.productscart.push(payload);
-            productscart=[...state.productscart];
-
+            productscart=[...state.productscart,state.count.length];
             return {productscart};
         default:
             return state;

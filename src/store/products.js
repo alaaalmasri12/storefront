@@ -34,15 +34,9 @@ export default (state = initialState, action) => {
                     }
                     return product
                 })
-                 productlist = state.products.filter(productitem => {
-                    if (productitem.category === payload) {
-                        return true;
-                    }
-                });
-                
                 return {
 
-                    ...state, products,productlist
+                    ...state, products
                 }
         default:
             return state;

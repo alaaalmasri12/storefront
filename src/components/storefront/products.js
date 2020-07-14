@@ -20,11 +20,8 @@ const useStyles = makeStyles({
     media: {
         height: 140,
     },
-    Card:
-    {
-
-    }
 });
+
 const Status = props => {
     function onClick(a,b)
     {
@@ -73,11 +70,8 @@ const Status = props => {
                         </CardActions>
                     </Card>
                 )}
-
             </section>
         </React.Fragment>
-
-
     )
 }
 const mapStateToProps = state => ({
