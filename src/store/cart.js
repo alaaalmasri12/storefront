@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
         case 'ADD':
             console.log(payload);
             productscart = state.productscart.push(payload);
-            productscart=[...state.productscart,state.count.length];
+            productscart=[...state.productscart];
             return {productscart};
         default:
             return state;
