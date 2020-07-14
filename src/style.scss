@@ -26,11 +26,13 @@
         }
     }
 }
-/
 .status {
     background: #ccc;
     color: #111;
-    height: 30rem;
+    height: 40rem;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: space-evenly;
     font-size: 2rem;
     font-weight: bold;
     padding-top: 5%;
@@ -71,4 +73,8 @@ border:none;
 {
     margin: 0px;
     line-height: 50px;
+}
+.MuiCardActions-root {
+   
+    justify-content: center;
 }

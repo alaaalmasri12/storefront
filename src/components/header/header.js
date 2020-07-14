@@ -1,10 +1,18 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
 const useStyles = makeStyles((theme) => ({
   '@global': {
     ul: {
@@ -45,16 +53,25 @@ function Header() {
   return (
     <React.Fragment>
        
-      <AppBar position="static" color="light" elevation={0} className={classes.appBar}>
-        <Toolbar className={classes.toolbar}>
-
-          <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-<h2>Our Store</h2>
-          </Typography>
-          <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-          <Grid container direction="row" justify="flex-end" alignItems="center"> <h5>Cart(0)</h5></Grid> 
       <CssBaseline />
-</Typography>
+      <AppBar position="static" color="primary" elevation={0} className={classes.appBar}>
+        <Toolbar className={classes.toolbar}>
+          <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+            Our Store
+          </Typography>
+          {/* These get pushed to the right, becuase the classes.toolbarTitle sets flexGrow to 1... */}
+          <nav>
+            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
+              Features
+            </Link>
+            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
+              Enterprise
+            </Link>
+            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
+              Support
+            </Link>
+          </nav>
+          <span>Cart(0)</span>
         </Toolbar>
       </AppBar>
 
